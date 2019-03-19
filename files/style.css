@@ -20,9 +20,11 @@ html {
 }
 
 body {
-    background: #7AD0CF;
+    background: #3C3C3D;
     margin: 30px 50px;
     line-height: 1.4;
+    border: 0px;
+    box-sizing: border-box;
 }
 
 .btn {
@@ -47,15 +49,17 @@ img {
 
 .wrapper {
     background: #7AD0CF;
+    opacity: 0.7;
     text-align: center;
-    position: fixed;
+    top:0; 
+    position: fixed;  
     z-index: 999;
-    width: 100%;
+    margin: 0 auto;
 }
 
 .logo {
     width: 10%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .nav-toggle {
@@ -131,12 +135,6 @@ img {
     transition: opacity 150ms ease-in-out;
 }
 
-.main-nav:hover {
-    color: lightcoral;
-
-
-}
-
 .nav-toggle:checked~nav {
     display: block;
     transform: scale(1, 1);
@@ -147,44 +145,6 @@ img {
     transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 800px) {
-    .nav-toggle-label {
-        display: none;
-    }
-
-    .wrapper {
-        display: grid;
-        grid-template-columns: 1fr auto minmax(600px, 1fr);
-    }
-
-    .logo {
-        grid-column: 2 / 3;
-    }
-
-    .main-nav {
-        grid-column: 3 /4;
-        all: unset;
-        justify-content: flex-end;
-        align-items: center;
-        display: flex;
-
-    }
-
-    .main-nav ul {
-        display: flex;
-        justify-content: flex-end;
-
-    }
-
-    .main-nav li {
-        margin-right: 3em;
-        margin-bottom: 0;
-    }
-
-    .main-nav a {
-        opacity: 1;
-    }
-}
 
 /* .main-nav ul {
     display: grid;
@@ -239,6 +199,7 @@ img {
     align-items: start;
     justify-content: center;
     box-shadow: var(--shadow);
+    margin-bottom: 20px;
 }
 
 .showcase h1 {
@@ -319,9 +280,126 @@ footer {
     color: var(--light);
     text-align: center;
     padding: 1rem;
+} 
+
+.social {
+    list-style-type: none;
+    text-align: center;
 }
 
+.social li {
+    display: inline;
+}
+
+.social i {
+    font-size: 460%;
+    margin: 1%;
+    padding: 5% 5% 5% 4%;
+    color: #f5f5f5; 
+    background: #7AD0CF;
+    
+}
+
+.social i:hover {
+    color: #f5f5f5;
+}
+
+footer.second {
+    border-top: 1px solid #aadcd2;
+    background-color: #544b59; 
+    max-height: 55px;
+    margin: 0;
+    text-align: center;
+}
+
+footer.second p {
+    padding: 5px 0 9px 0;
+    text-align: center;
+}
+
+
+
+
 /* Media Queries */
+
+@media screen and (min-width: 800px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr auto min-max(600px, 1fr);
+    }
+
+    .logo {
+        grid-column: 2 / 3;
+        width: 14%;
+    }
+
+    .main-nav {
+        grid-column: 3 /4;
+        all: unset;
+        justify-content: flex-end;
+        align-items: center;
+        display: flex;
+        margin: 0 auto;
+        
+
+    }
+
+    .main-nav ul {
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .main-nav li {
+        margin-right: 3em;
+        margin-bottom: 0;
+    }
+
+    .main-nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    .main-nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: black;
+        position: absolute;
+        top: - 1em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    .main-nav a:hover::before {
+        transform: scale(1, 1);
+    }
+
+    .top-container {
+        margin-top: 160px;
+    }
+
+    .infoPic {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .portfolio {
+        margin-top: 10px;
+
+    }
+
+
+}
+
 
 @media(max-width:700px) {
     .top-container {
@@ -358,3 +436,166 @@ footer {
         ;
     }
 }
+
+/* About Us Page */
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    
+    border-bottom: 1px solid lightgrey;
+    width: 100%;
+    border: 1px solid red;
+    height: 100px;
+    padding-bottom: 15px;
+}
+
+@media (min-width: 1280px) {
+    .header {
+        width: 1280px;
+    }
+}
+
+.header h1 {
+    font-size: 60px;
+    font-family: Didot, serif;
+    font-weight: bold;
+    flex: 8;
+    text-align: center;
+    color: white;
+}
+
+.header span {
+    align-self: flex-end;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+.tabs {
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 47px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+@media (min-width: 1280px) {
+    .tabs {
+        width: 1280px;
+    }
+}
+
+.tabs .topics {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row;
+}
+
+.tabs .topics .title {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.tabs .topics .tab {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row;
+    color: #fff;
+    background-color: #333;
+    margin: 0 5px;
+    padding: 2px 10px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tabs .topics .tab:hover {
+    text-decoration: underline;
+}
+
+.tabs .topics .active-tab {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: none;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+    .cards-container {
+        width: 1200px;
+    }
+}
+
+.cards-container .card {
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: none;
+    flex-direction: column;
+    background-color: #fff;
+    width: 380px;
+    margin-bottom: 16px;
+    padding: 24px;
+}
+
+.cards-container .card .headline {
+    font-size: 25px;
+    font-family: Didot, serif;
+}
+
+.cards-container .card .author {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.cards-container .card .author .img-container {
+    padding-right: 10px;
+    border-right: 1px solid lightgrey;
+    height: 40px;
+}
+
+.cards-container .card .author .img-container img {
+    width: 40px;
+}
+
+.cards-container .card .author span {
+    padding-left: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+
+.tabs {
+    color: #f5f5f5;
+}
+
+.card {
+    color:white ;
+}
+
