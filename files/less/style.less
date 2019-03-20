@@ -47,7 +47,102 @@ img {
 /* Navigation */
 
 .wrapper {
-	background: #7ad0cf;
+	background: .wrapper {
+		background: #7ad0cf;
+		opacity: 0.9;
+		text-align: center;
+		top: 0;
+		position: fixed;
+		z-index: 999;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.logo {
+		width: 10%;
+		/* border: 1px solid red; */
+	}
+
+	.nav-toggle {
+		display: none;
+	}
+
+	.nav-toggle-label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-left: 1em;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.nav-toggle-label span,
+	.nav-toggle-label span::before,
+	.nav-toggle-label span::after {
+		display: block;
+		background: white;
+		height: 2px;
+		width: 2em;
+		border-radius: 2px;
+		position: relative;
+	}
+
+	.nav-toggle-label span::before,
+	.nav-toggle-label span::after {
+		content: '';
+		position: absolute;
+	}
+
+	.nav-toggle-label span::before {
+		bottom: 8px;
+	}
+
+	.nav-toggle-label span::after {
+		bottom: 8px;
+	}
+
+	.main-nav {
+		position: absolute;
+		text-align: left;
+		top: 100%;
+		left: 0;
+		background: var(--dark);
+		width: 100%;
+		transform: scale(1, 0);
+		transform-origin: top;
+		transition: transform 400ms ease-in-out;
+	}
+
+	.main-nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.main-nav li {
+		margin-bottom: 1em;
+		margin-left: 1em;
+	}
+
+	.main-nav a {
+		color: white;
+		text-decoration: none;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		opacity: 0;
+		transition: opacity 150ms ease-in-out;
+	}
+
+	.nav-toggle:checked~nav {
+		display: block;
+		transform: scale(1, 1);
+	}
+
+	.nav-toggle:checked~.main-nav a {
+		opacity: 1;
+		transition: opacity 250ms ease-in-out 250ms;
+	}
 	opacity: 0.9;
 	text-align: center;
 	top: 0;
@@ -572,9 +667,21 @@ header {
 
 /* Services Page */
 
+
+
+
+
+
+
+
+
+
+
+
+
 .aboutApp {
 	display: flex;
-	/* border: 1px solid red; */
+	border: 1px solid red; 
 	margin-top: 150px;
 	height: 417px;
 	justify-content: space-between;
@@ -583,7 +690,8 @@ header {
 
 .about {
 	background-color: var(--primary);
-	width: 49%;
+	width: 45%;
+	border-radius: 10px;
 }
 
 .about h1 {
@@ -591,10 +699,12 @@ header {
 }
 .about p {
 	color: var(--dark);
+	text-align: center;
 }
 
 .abcpic {
 	width: 49%;
+	border-radius: 10px;
 }
 
 .abc {
