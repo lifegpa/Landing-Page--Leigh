@@ -48,7 +48,7 @@ img {
 
 .wrapper {
 	background: #7ad0cf;
-	opacity: 0.7;
+	opacity: 0.9;
 	text-align: center;
 	top: 0;
 	position: fixed;
@@ -190,6 +190,7 @@ img {
 	justify-content: center;
 	box-shadow: var(--shadow);
 	margin-bottom: 20px;
+	margin-top: 49px;
 }
 
 .showcase h1 {
@@ -573,7 +574,7 @@ header {
 
 .aboutApp {
 	display: flex;
-	border: 1px solid red;
+	/* border: 1px solid red; */
 	margin-top: 150px;
 	height: 417px;
 	justify-content: space-between;
@@ -616,11 +617,9 @@ header {
 	margin: 0 auto;
 }
 
-
 .part1 {
 	display: flex;
 	flex-direction: row;
-	
 }
 
 .box1 {
@@ -628,8 +627,8 @@ header {
 	flex-direction: column;
 	/* border: 1px solid red; */
 	width: 25%;
-    background: var(--light);
-    margin: 1%;
+	background: var(--light);
+	margin: 1%;
 }
 
 .box2 {
@@ -637,8 +636,8 @@ header {
 	flex-direction: column;
 	/* border: 1px solid red; */
 	width: 25%;
-    background: var(--light);
-    margin: 1%;
+	background: var(--light);
+	margin: 1%;
 }
 
 .box3 {
@@ -646,8 +645,8 @@ header {
 	flex-direction: column;
 	/* border: 1px solid red; */
 	width: 25%;
-    background: var(--light);
-    margin: 1%;
+	background: var(--light);
+	margin: 1%;
 }
 
 .box4 {
@@ -655,8 +654,8 @@ header {
 	flex-direction: column;
 	/* border: 1px solid red; */
 	width: 25%;
-    background: var(--light);
-    margin: 1%;
+	background: var(--light);
+	margin: 1%;
 }
 
 .box5 {
@@ -664,15 +663,77 @@ header {
 	flex-direction: column;
 	/* border: 1px solid red; */
 	width: 25%;
-    background: var(--light);
-    margin: 1%;
+	background: var(--light);
+	margin: 1%;
 }
 
 .blackboard {
-height: 150px;
+	height: 150px;
 }
 
-.text-info {
-    
-   
+/* Contact Page */
+
+.contact {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.contact-title {
+	margin-top: 100px;
+	color: #fff;
+	text-transform: uppercase;
+	transition: all 4s ease-in-out;
+}
+
+.contact-title h1 {
+	font-size: 32px;
+	line-height: 10px;
+}
+
+.contact-title h2{
+    font-size: 16px;
+}
+
+form{
+    margin: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1 px solid black;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+form {
+    margin-top: 50px;
+    transition: all 4s ease-in-out;
+}
+
+.form-control {
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1 px solid gray;
+    color: #fff;
+    font-style: 18px;
+    margin-bottom: 16px;
+}
+
+input {
+    height: 45px;
+}
+
+form.submit{
+    background: #ff5722;
+    border-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+
 }
